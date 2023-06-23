@@ -1,0 +1,13 @@
+C:\Users\User\Source\Repos\Mathematical Questions\bin\Debug\Mathematical Questions.exe.config
+C:\Users\User\Source\Repos\Mathematical Questions\bin\Debug\Mathematical Questions.exe
+C:\Users\User\Source\Repos\Mathematical Questions\bin\Debug\Mathematical Questions.pdb
+C:\Users\User\Source\Repos\Mathematical Questions\obj\Debug\Mathematical Questions.csproj.AssemblyReference.cache
+C:\Users\User\Source\Repos\Mathematical Questions\obj\Debug\Mathematical Questions.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\Source\Repos\Mathematical Questions\obj\Debug\Mathematical_Questions.Form1.resources
+C:\Users\User\Source\Repos\Mathematical Questions\obj\Debug\Mathematical_Questions.Properties.Resources.resources
+C:\Users\User\Source\Repos\Mathematical Questions\obj\Debug\Mathematical Questions.csproj.GenerateResource.cache
+C:\Users\User\Source\Repos\Mathematical Questions\obj\Debug\Mathematical Questions.csproj.CoreCompileInputs.cache
+C:\Users\User\Source\Repos\Mathematical Questions\obj\Debug\Mathematical Questions.exe
+C:\Users\User\Source\Repos\Mathematical Questions\obj\Debug\Mathematical Questions.pdb
+C:\Users\User\Source\Repos\Mathematical Questions\obj\Debug\Mathematical_Questions.Form2.resources
+C:\Users\User\Source\Repos\Mathematical Questions\obj\Debug\Mathematical_Questions.Form3.resources
