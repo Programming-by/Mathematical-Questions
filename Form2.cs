@@ -53,13 +53,16 @@ namespace Mathematical_Questions
             Operation = "*";
         }
 
+        private void rbDivide_CheckedChanged(object sender, EventArgs e)
+        {
+            Operation = "/";
+        }
         private void btnGo_Click(object sender, EventArgs e)
         {
             GameLevel();
             Form3 frm = new Form3(Number1,Number2,Operation);    
             frm.ShowDialog();
-
-
         }
+
     }
 }

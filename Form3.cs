@@ -15,8 +15,8 @@ namespace Mathematical_Questions
         int _Number1 = 0;
         int _Number2 = 0;
         string _Operation = "+";
-        int Answer = 0;
-        int UserAnswer = 0;
+        double Answer = 0;
+        double UserAnswer = 0;
         public Form3(int Number1 ,int Number2,string Operation)
         {
             InitializeComponent();
@@ -41,7 +41,8 @@ namespace Mathematical_Questions
             if (Counter == 0)
             {
                 timer1.Enabled = false;
-                MessageBox.Show("Time Up", "Time Up", MessageBoxButtons.OK);                
+                MessageBox.Show("Time Up", "Time Up", MessageBoxButtons.OK);  
+                this.Close();
                 return;
             }
         }
@@ -65,7 +66,7 @@ namespace Mathematical_Questions
             lblOperation.Text = _Operation.ToString();
         }
 
-        private int RightAnswer()
+        private double RightAnswer()
         {
             switch (_Operation)
             {
@@ -75,8 +76,11 @@ namespace Mathematical_Questions
                 case "-":
                     Answer = _Number1 - _Number2;
                     break;
-                    case "*":
+                case "*":
                     Answer = _Number1 * _Number2;
+                    break;
+                case "/":
+                    Answer = _Number1 / _Number2;
                     break;
             }
             return Answer;
@@ -84,17 +88,20 @@ namespace Mathematical_Questions
    
         private void CheckAnswer()
         { 
-            UserAnswer = Convert.ToInt32(txtBox1.Text);
+            
+            UserAnswer = Convert.ToSingle(txtBox1.Text);
 
           if (RightAnswer() == UserAnswer)
             {
                 MessageBox.Show("True", "True Answer", MessageBoxButtons.OK);
-            } else
+            }
+            else
             {
                 MessageBox.Show("Wrong", "Wrong Answer", MessageBoxButtons.OK);
 
             }
 
+          timer1.Enabled = false;
           this.Close();
 
         }

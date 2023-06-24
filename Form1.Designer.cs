@@ -50,7 +50,7 @@
             // 
             this.lblProgress.AutoSize = true;
             this.lblProgress.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProgress.Location = new System.Drawing.Point(517, 279);
+            this.lblProgress.Location = new System.Drawing.Point(480, 279);
             this.lblProgress.Name = "lblProgress";
             this.lblProgress.Size = new System.Drawing.Size(55, 32);
             this.lblProgress.TabIndex = 1;
@@ -68,6 +68,7 @@
             // 
             // button1
             // 
+            this.button1.AutoEllipsis = true;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(377, 385);
             this.button1.Name = "button1";

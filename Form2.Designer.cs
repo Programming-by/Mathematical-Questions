@@ -40,6 +40,7 @@
             this.rbAdd = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.rbDivide = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -108,6 +109,7 @@
             // 
             // btnGo
             // 
+            this.btnGo.AutoEllipsis = true;
             this.btnGo.Location = new System.Drawing.Point(283, 220);
             this.btnGo.Name = "btnGo";
             this.btnGo.Size = new System.Drawing.Size(191, 102);
@@ -164,14 +166,26 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.rbDivide);
             this.groupBox2.Controls.Add(this.rbAdd);
             this.groupBox2.Controls.Add(this.rbSubtract);
             this.groupBox2.Controls.Add(this.rbMultiply);
             this.groupBox2.Location = new System.Drawing.Point(46, 307);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(200, 100);
+            this.groupBox2.Size = new System.Drawing.Size(200, 131);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
+            // 
+            // rbDivide
+            // 
+            this.rbDivide.AutoSize = true;
+            this.rbDivide.Location = new System.Drawing.Point(20, 99);
+            this.rbDivide.Name = "rbDivide";
+            this.rbDivide.Size = new System.Drawing.Size(76, 20);
+            this.rbDivide.TabIndex = 13;
+            this.rbDivide.Text = "Division";
+            this.rbDivide.UseVisualStyleBackColor = true;
+            this.rbDivide.CheckedChanged += new System.EventHandler(this.rbDivide_CheckedChanged);
             // 
             // Form2
             // 
@@ -209,5 +223,6 @@
         private System.Windows.Forms.RadioButton rbAdd;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.RadioButton rbDivide;
     }
 }
