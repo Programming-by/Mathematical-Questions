@@ -11,12 +11,11 @@ namespace Mathematical_Questions
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnStart_Click(object sender, EventArgs e)
         {
             progressBar1.Value = 0;
             progressBar1.Minimum = 0;
             progressBar1.Maximum = 100;
-
 
             for (int i = 1; i <= 10; i++)
             {
@@ -24,16 +23,13 @@ namespace Mathematical_Questions
                 {
                     Thread.Sleep(500);
                     progressBar1.Value += 10;
-                    lblProgress.Text = ((float) progressBar1.Value / progressBar1.Maximum * 100 + "%");
+                    lblProgress.Text = ((float)progressBar1.Value / progressBar1.Maximum * 100 + "%");
                     progressBar1.Refresh();
                     lblProgress.Refresh();
-                } 
-
-                   
+                }
             }
             Form2 frm = new Form2();
             frm.ShowDialog();
-
         }
     }
 }

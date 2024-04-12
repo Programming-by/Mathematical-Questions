@@ -31,7 +31,7 @@
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.lblProgress = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnStart = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -66,24 +66,24 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Mathematical Questions";
             // 
-            // button1
+            // btnStart
             // 
-            this.button1.AutoEllipsis = true;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(377, 385);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(128, 52);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Start";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnStart.AutoEllipsis = true;
+            this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStart.Location = new System.Drawing.Point(377, 385);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(128, 52);
+            this.btnStart.TabIndex = 3;
+            this.btnStart.Text = "Start";
+            this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btnStart);
             this.groupBox1.Controls.Add(this.lblProgress);
             this.groupBox1.Controls.Add(this.progressBar1);
             this.groupBox1.Location = new System.Drawing.Point(0, 1);
@@ -134,7 +134,7 @@
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label lblProgress;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;

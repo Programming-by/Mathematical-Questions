@@ -9,50 +9,45 @@ namespace Mathematical_Questions
         {
             InitializeComponent();
         }
-
         int Number1 = 0;
         int Number2 = 0;
         string Operation = "+";
-
-        private void RandomNumber(int Num1 , int Num2)
+        static Random rnd = new Random();
+        private int RandomNumber(int Min, int Max)
         {
-            Random rnd  = new Random();
-
-           Number1 =  rnd.Next(Num1, Num2);
-           Number2 =  rnd.Next(Num1, Num2);
+           return rnd.Next(Min, Max);
         }
-
+        private void GenerateNumbers(int Min, int Max)
+        {
+            Number1 = RandomNumber(Min, Max);
+            Number2 = RandomNumber(Min, Max);
+        }
         private void GameLevel()
         {
             if (rbEasy.Checked)
             {
-                RandomNumber(1,20);
-
+                GenerateNumbers(1, 20);
             } else if (rbMedium.Checked)
             {
-                RandomNumber(20, 99);
+                GenerateNumbers(20, 99);
             }
             else
             {
-                RandomNumber(100, 1000);
+                GenerateNumbers(100, 1000);
             }
         }      
-      
         private void rbAdd_CheckedChanged(object sender, EventArgs e)
         {
             Operation = "+";
-
         }
         private void rbSubtract_CheckedChanged(object sender, EventArgs e)
         {
             Operation = "-";
-
         }
         private void rbMultiply_CheckedChanged(object sender, EventArgs e)
         {
             Operation = "*";
         }
-
         private void rbDivide_CheckedChanged(object sender, EventArgs e)
         {
             Operation = "/";

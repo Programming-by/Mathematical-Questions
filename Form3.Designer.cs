@@ -34,10 +34,12 @@
             this.lblNumber2 = new System.Windows.Forms.Label();
             this.lblOperation = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtAnswer = new System.Windows.Forms.TextBox();
+            this.btnSubmit = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lblTime = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -90,24 +92,26 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "=";
             // 
-            // txtBox1
+            // txtAnswer
             // 
-            this.txtBox1.Location = new System.Drawing.Point(236, 281);
-            this.txtBox1.Multiline = true;
-            this.txtBox1.Name = "txtBox1";
-            this.txtBox1.Size = new System.Drawing.Size(253, 32);
-            this.txtBox1.TabIndex = 5;
+            this.txtAnswer.Location = new System.Drawing.Point(236, 281);
+            this.txtAnswer.Multiline = true;
+            this.txtAnswer.Name = "txtAnswer";
+            this.txtAnswer.Size = new System.Drawing.Size(253, 32);
+            this.txtAnswer.TabIndex = 5;
+            this.txtAnswer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAnswer_KeyPress);
+            this.txtAnswer.Validating += new System.ComponentModel.CancelEventHandler(this.txtAnswer_Validating);
             // 
-            // button1
+            // btnSubmit
             // 
-            this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button1.Location = new System.Drawing.Point(287, 353);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(136, 72);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "OK";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnSubmit.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnSubmit.Location = new System.Drawing.Point(287, 353);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(136, 72);
+            this.btnSubmit.TabIndex = 6;
+            this.btnSubmit.Text = "OK";
+            this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // timer1
             // 
@@ -124,14 +128,18 @@
             this.lblTime.TabIndex = 7;
             this.lblTime.Text = "10S";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 488);
             this.Controls.Add(this.lblTime);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.txtBox1);
+            this.Controls.Add(this.btnSubmit);
+            this.Controls.Add(this.txtAnswer);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lblOperation);
             this.Controls.Add(this.lblNumber2);
@@ -140,6 +148,7 @@
             this.Name = "Form3";
             this.Text = "Form3";
             this.Load += new System.EventHandler(this.Form3_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -152,9 +161,10 @@
         private System.Windows.Forms.Label lblNumber2;
         private System.Windows.Forms.Label lblOperation;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtAnswer;
+        private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lblTime;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
