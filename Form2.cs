@@ -58,6 +58,5 @@ namespace Mathematical_Questions
             Form3 frm = new Form3(Number1,Number2,Operation);    
             frm.ShowDialog();
         }
-
     }
 }

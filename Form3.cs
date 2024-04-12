@@ -75,19 +75,21 @@ namespace Mathematical_Questions
             return Answer;
         }
         private void CheckAnswer()
-        { 
-            UserAnswer = Convert.ToSingle(txtAnswer.Text);
-
-          if (RightAnswer() == UserAnswer)
+        {
+            if (float.TryParse(txtAnswer.Text , out UserAnswer ))
             {
-                MessageBox.Show("True", "True Answer", MessageBoxButtons.OK,MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("Wrong", "Wrong Answer", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+                if (RightAnswer() == UserAnswer)
+                {
+                    MessageBox.Show("True", "True Answer", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Wrong", "Wrong Answer", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            } else
+                MessageBox.Show("Please enter a Digit", "Wrong Answer", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-          timer1.Stop();
+            timer1.Stop();
           this.Close();
         }
         private void btnSubmit_Click(object sender, EventArgs e)
@@ -105,7 +107,7 @@ namespace Mathematical_Questions
         }
         private void txtAnswer_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != '-' ;
         }
     }
 }
